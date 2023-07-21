@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui;
+}
+
+:root {
+  --clr-white: white;
+  --clr-black: black;
+  --clr-primary: lightblue;
+  --clr-primary1: red;
+  --clr-clr1: #003147;
+  --clr-clr2: #03a9f4;
+  --clr-clr3: #f4f7f8;
+  --clr-clr4: #EB6440;
+  --clr-clr5: #454545;
+  --clr-clr-rgb1: rgba(0, 0, 0, 0.1);
+  --clr-clr-rgb2: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  background: var(--clr-clr3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  outline: solid 1px var(--clr-black);
+  padding-block: 20px;
+  padding-inline: 20px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-white);
+  margin-inline: 20px;
+  margin-block: 20px;
+  box-shadow: 0 20px 30px var(--clr-clr-rgb1);
+}
+
+/* Contact */
+
+.contactInfo {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
+}
+
+/* .contactInfo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+} */
+
+.contactInfo h2 {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  margin-bottom: 2px;
+  color: var(--clr-clr4);
+}
+
+.contactInfo h3 {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
+
+.contactInfo h3 span {
+  display: inline;
+  width: 100px;
+  border-bottom: solid 1px var(--clr-clr1);
+  padding-bottom: 3px;
+}
+
+.contactInfo p {
+  font: normal 300 14px/110% system-ui;
+  margin: 10px 0 15px 0;
+}
+
+.contactInfo .icons {
+  width: 100%;
+  height: 100%;
+  padding-inline-start: 10px;
+  background: #EB6440;
+}
+
+.contactInfo span {
+  display: inline-flex;
+  width: 40px;
+  cursor: pointer;
+  margin-block: 10px;
+}
+
+.contactInfo span a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Work Experience */
+
+.about-me {
+  width: 100%;
+  height: 100%;
+}
+
+.about-me .work_experience {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-me :is(.work_experience, .education, .technical_skills, .language) h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--clr-clr4);
+  padding-block-end: 0.2rem;
+  margin-block-start: 1rem;
+  margin-bottom: 0.6rem;
+  /* background: var(--clr-clr-rgb1); */
+}
+
+.about-me :is(.work_experience, .education, .technical_skills, .language) h3 span {
+  border-bottom: dashed 1px var(--clr-clr5);
+  padding-bottom: 0.1rem;
+}
+
+.about-me .work_experience p {
+  font: normal 100 15px/100% system-ui;
+  margin-inline-start: 0;
+  margin-block-start: 0.1rem;
+  margin-block-end: 0.3rem;
+}
+
+.about-me .work_experience p:nth-of-type(2) {
+  font: normal 100 15px/100% system-ui;
+  margin-inline-start: 0;
+  margin-block-start: 1.25rem;
+  margin-block-end: 0.3rem;
+}
+
+.about-me .work_experience strong {
+  font-family: system-ui;
+  font-weight: 600;
+}
+
+.work_experience h4 {
+  position: relative;
+  font-size: 15px;
+  font-family: system-ui;
+  font-weight: 500;
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+.work_experience h4 span {
+  border-bottom: dashed 1px var(--clr-clr5);
+  padding-bottom: 0.1rem;
+}
+
+.work_experience ul {
+  list-style: disc inside;
+}
+
+.work_experience ul li {
+  margin-top: 0.2rem;
+  font-size: 14px;
+}
+
+.work_experience ul li span {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.work_experience ::marker {
+  content: '→  ';
+}
+
+/* Education */
+
+.about-me .education h4 {
+  font: normal 600 18px/110% system-ui;
+}
+
+.about-me .education h5 {
+  font: normal 400 13px/110% system-ui;
+}
+
+.about-me .education h4 span {
+  font-size: 14px;
+}
+
+/* Technical Skills */
+
+.about-me .technical_skills h5 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 0.75em;
+  padding-bottom: 0.3rem;
+}
+
+.about-me .technical_skills h5 span {
+  border-bottom: dashed 1px var(--clr-clr1);
+}
+
+.technical_skills :is(.front-end, .back-end) ul {
+  list-style: none;
+}
+
+.technical_skills :is(.front-end, .back-end) ul li {
+  padding-bottom: 0.2rem;
+  font-size: 14px;
+}
+
+/* Language */
+
+.about-me .language ul {
+  list-style: none;
+  font-size: 14px;
+}
